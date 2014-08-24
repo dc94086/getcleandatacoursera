@@ -63,18 +63,19 @@ There are no mean or standard deviation measurements for the variables associate
 
 * Begin Step 2
 * Extract the columns assoicated with the mean of each measurement
+
 ```{r}
 mean <- mdata[,grep("mean", colnames(mdata))]
-```{r}
+```
 
 * Extract the columns associated with the standard deviation of each measurement
 ```{r}
 std <- mdata[,grep("std", colnames(mdata))]
-```{r}
+```
 * Combine subject, activity, mean, standard deviation columns into one data frame
 ```{r}
 ext <- cbind(mdata[,1:2], mean, std)
-```{r}
+```
 * End step 2
 
 * Begin step 3
@@ -83,7 +84,7 @@ ext <- cbind(mdata[,1:2], mean, std)
 ```{r}
 ext$activity <- as.factor(ext$activity)
 levels(ext$activity) <- c("WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LAYING")
-```{r}
+```
 * End step 3
 
 * Begin step 4
