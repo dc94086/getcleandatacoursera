@@ -3,7 +3,7 @@ getcleandatacoursera
 
 Course Project, getdata-006
 
-#* Introduction
+### Introduction
 
 The R script called run_analysis.R that does the following. 
 
@@ -18,10 +18,10 @@ from the accelerometers from the Samsung Galaxy S smartphone.
 A full description is available at the site where the data was obtained:<http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones>.Data for the project:
 <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>.
 
-#* Preparation
+### Preparation
 The original data set is to be downloaded and unzipped in the R working directory
 
-#* Description of the script
+### Description of the script
 
 * Begin step 1
 * Read and create data frames from the training data set
@@ -89,8 +89,12 @@ levels(ext$activity) <- c("WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "
 
 * Begin step 4
 * Create temporary vector from column names for editing
+```{r}
 tmpnames <- names(ext)
-* Each of the following gsub to make the variable names more descriptive or easier to read
+```
+* Each of the following gsub statement aims to make the variable names more descriptive or easier to read
+* Uppercase of first letter of each word makes it easier to read long names
+
 * Remove dashes and brackets characters
 ```{r}
 tmpnames <- gsub("-|\\()", "", tmpnames)
