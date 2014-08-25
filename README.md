@@ -92,7 +92,7 @@ levels(ext$activity) <- c("WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "
 ```{r}
 tmpnames <- names(ext)
 ```
-* Each of the following gsub statement aims to make the variable names more descriptive or easier to read
+* Each of the following gsub statements aims to make the variable names more descriptive or easier to read
 * Uppercase of first letter of each word makes it easier to read long names
 
 * Remove dashes and brackets characters
